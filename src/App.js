@@ -3,6 +3,7 @@ import { ApolloProvider } from "react-apollo";
 import Dogs from './Dogs'
 import DogPhoto from './DogPhoto'
 // import ExchangeRates from './ExchangeRates'
+import DelayedQuery from './DelayedQuery'
 import client from './client'
 
 class App extends Component {
@@ -19,9 +20,9 @@ class App extends Component {
       <ApolloProvider client={client}>
         <div className="text-center">
           <h2>My first Apollo app <span role="img" aria-label="emoji rocket">🚀</span></h2>
-          <div><a target="_blank" rel="noopener noreferrer" href="https://www.apollographql.com/docs/react/essentials/queries.html#manual-query">TODO:</a></div>  
-
           <Dogs onDogSelected={this.onDogSelected} />
+          <br /><br />
+          <DelayedQuery />
           <br /><br />
           <DogPhoto breed={this.state.selectedDog}/>
           {/* <ExchangeRates /> */}
