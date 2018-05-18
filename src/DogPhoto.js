@@ -28,7 +28,7 @@ const DogPhoto = ({ breed }) => (
         <div>
           <img
             src={data.dog.displayImage}
-            style={{ height: 100, width: 100 }}
+            style={{ height: 200, width: 'auto' }}
             alt={`${breed}`}
           />
           <br /><br />
