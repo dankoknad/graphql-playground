@@ -19,6 +19,8 @@ class App extends Component {
       <ApolloProvider client={client}>
         <div className="text-center">
           <h2>My first Apollo app <span role="img" aria-label="emoji rocket">🚀</span></h2>
+          <div><a target="_blank" href="https://www.apollographql.com/docs/react/essentials/queries.html#manual-query">TODO:</a></div>  
+
           <Dogs onDogSelected={this.onDogSelected} />
           <br /><br />
           <DogPhoto breed={this.state.selectedDog}/>
