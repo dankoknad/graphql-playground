@@ -1,6 +1,7 @@
 import React from 'react';
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
+import { DIRECTIVE } from 'graphql/language/kinds';
 
 const GET_DOG_PHOTO = gql`
   query dog($breed: String!) {

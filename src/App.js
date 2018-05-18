@@ -6,13 +6,22 @@ import DogPhoto from './DogPhoto'
 import client from './client'
 
 class App extends Component {
+  state = {
+    selectedDog: ''
+  }
+
+  onDogSelected = (e) => {
+    this.setState({selectedDog: e.target.value})
+  }
+
   render() {
     return (
       <ApolloProvider client={client}>
         <div className="text-center">
           <h2>My first Apollo app <span role="img" aria-label="emoji rocket">🚀</span></h2>
-          <Dogs />
-          <DogPhoto />
+          <Dogs onDogSelected={this.onDogSelected} />
+          <br /><br />
+          <DogPhoto breed={this.state.selectedDog}/>
           {/* <ExchangeRates /> */}
         </div>
       </ApolloProvider>
