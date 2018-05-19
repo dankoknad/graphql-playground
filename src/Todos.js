@@ -28,6 +28,8 @@ const Todos = () => (
                     ref={node => {
                       input = node;
                     }}
+                    defaultValue={type}
+                    placeholder='already edited'
                   />
                   <button type="submit">Update Todo</button>
                 </form>
