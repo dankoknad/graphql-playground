@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { ApolloProvider } from "react-apollo";
-import Dogs from './Dogs'
-import DogPhoto from './DogPhoto'
+import AddTodo from './AddTodo'
+import Todos from './Todos'
+// import Dogs from './Dogs'
+// import DogPhoto from './DogPhoto'
 // import ExchangeRates from './ExchangeRates'
-import DelayedQuery from './DelayedQuery'
+// import DelayedQuery from './DelayedQuery'
 import client from './client'
 
 class App extends Component {
@@ -20,12 +22,10 @@ class App extends Component {
       <ApolloProvider client={client}>
         <div className="text-center">
           <h2>My first Apollo app <span role="img" aria-label="emoji rocket">🚀</span></h2>
-          <Dogs onDogSelected={this.onDogSelected} />
           <br /><br />
-          <DelayedQuery />
+          <AddTodo />
           <br /><br />
-          <DogPhoto breed={this.state.selectedDog}/>
-          {/* <ExchangeRates /> */}
+          <Todos />
         </div>
       </ApolloProvider>
     );
