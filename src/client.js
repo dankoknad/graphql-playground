@@ -1,10 +1,15 @@
 import ApolloClient from "apollo-boost";
+import { defaults, resolvers } from "./resolvers";
+import { typeDefs } from './typeDefs'
 
 const client = new ApolloClient({
-  connectToDevTools: true, 
-  uri: "https://8v9r9kpn7q.lp.gql.zone/graphql" // Todos
-  // uri: "https://w5xlvm3vzz.lp.gql.zone/graphql" // ExchangeRates
-  // uri: "https://nx9zvp49q7.lp.gql.zone/graphql" // Dogs
+  connectToDevTools: true,
+  uri: `https://nx9zvp49q7.lp.gql.zone/graphql`,
+  clientState: {
+    defaults,
+    resolvers,
+    typeDefs
+  }
 });
 
 export default client;

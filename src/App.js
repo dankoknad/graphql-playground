@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ApolloProvider } from "react-apollo";
 import AddTodo from './AddTodo'
-import Todos from './Todos'
+import TodoList from './TodoList'
 // import Dogs from './Dogs'
 // import DogPhoto from './DogPhoto'
 // import ExchangeRates from './ExchangeRates'
@@ -25,7 +25,7 @@ class App extends Component {
           <br /><br />
           <AddTodo />
           <br /><br />
-          <Todos />
+          <TodoList />
         </div>
       </ApolloProvider>
     );
